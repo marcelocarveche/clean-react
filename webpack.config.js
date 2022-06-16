@@ -13,35 +13,37 @@ module.exports = {
     alias: {
       '@': path.join(__dirname, 'src'),
     },
-    module: {
-      rules: [{
-        test: /\.ts(x?)$/,
-        loader: 'ts.loader',
-        exclude: /node_modules/
+  },
+  module: {
+    rules: [{
+      test: /\.ts(x?)$/,
+      loader: 'ts-loader',
+      exclude: /node_modules/
+    }, {
+      test: /\.scss$/,
+      use: [{
+        loader: 'style-loader',
+      },{
+        loader: 'css-loader',
+        options: {
+          modules: true
+        }
       }, {
-        test: /\.scss$/,
-        use: [{
-          loader: 'style-loader',
-        },{
-          loader: 'css-loader',
-          options: {
-            modules: true
-          }
-        }, {
-          loader: 'sass-loader',
-        },
-        ]
-      }]
-    },
-    devServer: {
-      contentBase: './public',
+        loader: 'sass-loader',
+      },
+      ]
+    }]
+  },
+  devServer: {
+    static: './public',
+    historyApiFallback: true,
+    devMiddleware: {
       writeToDisk: true,
-      historyApiFallback: true
-    },
-    externals: {
-      react: 'React',
-      'react-dom': 'ReactDOM'
     }
+  },
+  externals: {
+    react: 'React',
+    'react-dom': 'ReactDOM'
   },
   plugins: [
     new CleanWebpackPlugin()
