@@ -1,10 +1,36 @@
+import { Spinner } from '@/presentation/components';
+import { logoBase64 } from '@/presentation/components/img';
 import React from 'react';
 import Styles from './login-styles.scss'
 
 export const Login: React.FC = () => {
   return (
     <div className={Styles.login}>
-      <h1>HELLO</h1>
+      <header className={Styles.header}>
+        <img src={logoBase64} />
+        <h1>4Dev - Enquetes para Programadores</h1>
+      </header>
+      <form className={Styles.form} action="">
+        <h2>Login</h2>
+        <div className={Styles.inputWrap}>
+          <input type="email" name="email" placeholder="Digite seu e-mail" />
+          <span className={Styles.status}>🔴</span>
+        </div>
+        <div className={Styles.inputWrap}>
+        <input type="password" name="password" placeholder="Digite sua senha" />
+          <span className={Styles.status}>🔴</span>
+        </div>
+        
+        <button className={Styles.submit} type="submit">Entrar</button>
+        <span className={Styles.link}>Criar conta</span>
+        <div className={Styles.spinnerWrap}>
+          <Spinner />
+        </div>
+        <div className={Styles.errorWrap}>
+          <span className={Styles.error}>Error</span>
+        </div>
+      </form>
+      <footer className={Styles.footer}/>
     </div>
   )
 }
