@@ -1,5 +1,4 @@
-import {Footer, FormStatus, Input, LoginHeader, Spinner } from '@/presentation/components';
-import { logoBase64 } from '@/presentation/components/img';
+import {Footer, FormStatus, Input, LoginHeader } from '@/presentation/components';
 import React from 'react';
 import Styles from './login-styles.scss'
 
