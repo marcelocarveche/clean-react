@@ -36,25 +36,11 @@ button {
       font-size: 20px;
       text-transform: uppercase;
     }
-
-    .inputWrap{
-      display: flex;
-      position: relative;
-      align-items: center;
-    }
-
-    input{
-      flex-grow: 1;
-    }
-    .status{
-      position: absolute;
-      right: 10px;
-      font-size: 12px;
-      cursor: help;
-    }
+    
     .submit{
       margin-top: 18px;
     }
+    
     .link{
       text-align: center;
       color: $primary;
