@@ -50,27 +50,6 @@ button {
         cursor: pointer;
       }
     }
-    .spinnerWrap{
-      display: flex;
-      align-items: center;
-      justify-content:center;
-      height: 100px;
-    }
-    .errorWrap{
-      .error{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 5px;
-        height: 32px;
-        background: rgb(241, 132, 132);
-        color: $black;
-        
-      }
-    }
-  }
-  .footer{
-    background-color: $primary;
-    height: 48px;
+    
   }
 }
