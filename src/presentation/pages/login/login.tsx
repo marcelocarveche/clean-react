@@ -1,4 +1,4 @@
-import { Spinner } from '@/presentation/components';
+import {Footer, LoginHeader, Spinner } from '@/presentation/components';
 import { logoBase64 } from '@/presentation/components/img';
 import React from 'react';
 import Styles from './login-styles.scss'
@@ -6,10 +6,7 @@ import Styles from './login-styles.scss'
 export const Login: React.FC = () => {
   return (
     <div className={Styles.login}>
-      <header className={Styles.header}>
-        <img src={logoBase64} />
-        <h1>4Dev - Enquetes para Programadores</h1>
-      </header>
+      <LoginHeader />
       <form className={Styles.form} action="">
         <h2>Login</h2>
         <div className={Styles.inputWrap}>
@@ -30,7 +27,7 @@ export const Login: React.FC = () => {
           <span className={Styles.error}>Error</span>
         </div>
       </form>
-      <footer className={Styles.footer}/>
+      <Footer />
     </div>
   )
 }

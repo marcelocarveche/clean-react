@@ -1,0 +1,14 @@
+@import '../styles/colors.scss';
+
+.header{
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  border-top: 40px solid $primaryDark;
+  background-color: $primary;
+  align-items: center;
+  padding: 20px 0;
+  h1 {
+    color: $white;
+  }
+}
